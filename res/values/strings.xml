@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SysexecActivity!</string>
+    <string name="app_name">Sysexec</string>
+    <string name="command">$</string>
+    <string name="exec">Exec</string>
+
+</resources>

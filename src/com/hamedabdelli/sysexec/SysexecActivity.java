@@ -27,9 +27,6 @@ import android.widget.TextView.OnEditorActionListener;
 
 public class SysexecActivity extends Activity {
 
-    /**
-     * Called when the activity is first created.
-     */
     EditText cmd;
     TextView res;
     Button exec;
@@ -42,6 +39,9 @@ public class SysexecActivity extends Activity {
     int cmdNumber = 0;
     Stack<String> lastCmds = new Stack<String>();
 
+    /**
+    * Called when the activity is first created.
+    */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +56,7 @@ public class SysexecActivity extends Activity {
         cmd = (EditText) findViewById(R.id.cmd);
         exec = (Button) findViewById(R.id.exec);
         res = (TextView) findViewById(R.id.res);
+
         res.setTextColor(Color.GREEN);
 
         cmd.setOnFocusChangeListener(new OnFocusChangeListener() {
@@ -118,6 +119,7 @@ public class SysexecActivity extends Activity {
 
     }
 
+    //Execute command and returns the working directory as a result
     private File exec(final String command, File dir) {
         lastCmds.push(command);
         Log.i("Stack pushed:",command);
